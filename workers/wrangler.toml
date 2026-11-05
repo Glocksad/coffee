@@ -1,0 +1,15 @@
+name = "coffee-orders"
+main = "index.js"
+compatibility_date = "2025-04-01"
+
+# Укажите origin сайта (без завершающего /), напр. https://USERNAME.github.io
+[vars]
+ALLOWED_ORIGIN = "https://USERNAME.github.io"
+
+[[durable_objects.bindings]]
+name = "ORDERS"
+class_name = "Orders"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Orders"]
